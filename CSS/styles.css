@@ -1,0 +1,395 @@
+@font-face {
+    font-family: 'Catamaran';
+    src: url(../Fonts/Catamaran.ttf);
+}
+@font-face {
+    font-family: 'GrandHotel';
+    src: url(../Fonts/GrandHotel-.ttf);
+}
+:root{
+    --primarycolor:chocolate;
+    --mainDark:gray;
+    --letterspacing:.5rem;
+    --secondarycolor:whitesmoke;
+    --maintransition:all .3s ease-in-out;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Catamaran';
+}
+.main-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    color: yellow;
+    background-color: var(--primarycolor);
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    letter-spacing: var(--letterspacing);
+    outline: 2px solid var(--primarycolor);
+    outline-offset: 2px;
+}
+a{
+    text-decoration: none; 
+}
+
+.header{
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('../Images/FOODS.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-subtitle{
+    font-family: 'GrandHotel';
+    font-size: 3rem;
+    color: skyblue;
+    letter-spacing: var(--letterspacing);
+    animation: slidefromkushoto 2s 1;
+}
+.header-title{
+    letter-spacing: var(--letterspacing);
+    font-family: 'Catamaran';
+    color:yellow;
+    text-transform: uppercase;
+    animation: slidefromkulia 2s 1;
+}
+.header-title-thin{
+    font-family: 'GrandHotel';
+    font-size: 3.5rem;
+    color:white;
+    font-weight: 100;
+    animation: slidefromkushoto 2s 1;
+}
+.btn{
+    animation:  bounce 2s 1;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    color: yellow;
+    background-color: var(--primarycolor);
+    padding: 0.5rem 3rem;
+    font-size: 1.5rem;
+    letter-spacing: var(--letterspacing);
+    outline: 2px solid var(--primarycolor);
+    outline-offset: 2px;
+}
+@keyframes slidefromkushoto {
+    0%{
+        transform: translateX(-1000px);
+    }
+    50%{
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+@keyframes slidefromkulia {
+    0%{
+        transform: translateX(1000px);
+    }
+    50%{
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+@keyframes slidefromkushoto {
+    0%{
+        transform: translateX(-1000px);
+    }
+    50%{
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+@keyframes bounce {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+.divider{
+    height: .5rem;
+    background: linear-gradient(to right ,var(--primarycolor),var(--secondarycolor),var(--primarycolor));
+}
+.huduma-section{
+    background-color: chocolate;
+    display: flex;
+    flex-wrap: wrap;
+}
+.huduma{
+    width: 50%;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 1rem;
+}
+@media screen and(min-width:576px) {
+    .huduma{
+        width: 25%;
+    }
+    
+}
+.huduma:hover{
+    cursor:pointer;
+    background-color: blanchedalmond;
+    transition: var(--maintransition);
+}
+.huduma-text{
+    margin: 0 auto;
+    max-width: 200px;
+}
+.huduma-icon{
+    font-size: 2.5rem;
+    display: inline-block;
+    transition: var(--maintransition);
+}
+.huduma:hover .huduma-icon{
+    transform: translateY(-5px);
+}
+.huduma-title{
+    color:green;
+    text-transform: uppercase;
+    letter-spacing: var(--letterspacing);
+    font-family: 'GrandHotel';
+    font-weight: bold;
+}
+.kuhusu-section{
+    padding: 4rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-container{
+    box-sizing: border-box;
+    border: 3px solid var(--primarycolor);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.image-container:hover .kuhusu-image{
+    transform: scale(1.4);
+}
+.kuhusu-image{
+    width: 100%;
+    transform: scale(1.2);
+    transition: var(--maintransition);
+}
+.kuhusu-subtitle{
+    font-family:'GrandHotel';
+   font-size: 2.5rem;
+   color:green;
+   letter-spacing: var(--letterspacing);
+}
+.kuhusu-title{
+    font-family: 'Catamaran';
+    text-transform: uppercase;
+    color: var(--primarycolor);
+    letter-spacing: var(--letterspacing);
+}
+.kuhusu-text{
+    text-align: center;
+}
+.kuhusu-kushoto, .kuhusu-kulia{
+    flex-shrink: 0;
+    width: 100%;
+}
+
+@media screen and(min-width:576px) {
+    .kuhusu-kushoto, .kuhusu-kulia{
+        width: 50%;
+    }
+    .kuhudsu-kulia{
+        padding:1rem ;
+    }
+    .main-btn{
+        padding: 0.5rem 1rem;
+    }
+
+    
+}
+.section-dark{
+    background-color: var(--mainDark);
+    color:white;
+}
+.bidhaa-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bidhaa-kushoto{
+    width: 100%;
+    flex-shrink: 0;
+}
+.bidhaa{
+    width:100% ;
+    flex-shrink: 0;
+}
+.bidhaa-kulia{
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+@media screen and(min-width:720px) {
+    .bidhaa{
+        width: 50%;
+        padding-right: .5rem;
+    }
+    
+}
+@media screen and(min-width:920px) {
+    .bidhaa{
+        width: 33.3%;
+    }
+    
+}
+@media screen and(min-width:1020px) {
+    .bidhaa-kusgoto{
+        width: 30%;
+    }
+    .bidhaa-kulia{
+        width: 70%;
+    }
+}
+.center-section{
+    padding: 2rem 4rem;
+}
+.bidhaa-subtitle{
+    font-family: 'GrandHotel';
+    color:black;
+    font-size: 2.5rem;
+}
+.bidhaa-title{
+    letter-spacing: var(--letterspacing);
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: green;
+}
+.bidhaa-image{
+    width: 100%;
+    border-radius: 2rem;
+}
+.bidhaa-kulia{
+    padding-top: 2rem;
+    text-align: center;
+}
+.bidhaa-jina{
+    font-family: 'GrandHotel';
+    text-transform: uppercase;
+    color:black;
+    letter-spacing: var(--letterspacing);
+}
+.bidhaa-bei{
+    color:blue;
+    text-transform: uppercase;
+}
+.wasiliana-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.wasiliana-kushoto, .wasiliana-kulia{
+    width: 100%;
+    padding-right: 1rem;
+}
+
+@media screen and (min-width:576px) {
+    .wasiliana-kushoto, .wasiliana-kulia{
+        width: 50%;
+    }
+}    
+
+.wasiliana-title{
+    color: var(--primarycolor);
+    font-size: 2.5rem;
+    font-family: GrandHotel;
+    margin: 1rem 0;
+}
+.input{
+    margin-top: 1rem;
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    padding: .5rem;
+    border-bottom: 2px solid var(--primarycolor);
+}
+.input::placeholder{
+    text-transform: uppercase;
+    letter-spacing: var(--letterspacing);
+    color:orange;
+    font-weight: bold;
+}
+.fab fa-instagram{
+    display: inline;
+}
+.footer{
+    padding: 2rem ;
+    text-align: center;
+}
+.social-icon{
+    color: yellow;
+    transition: var(--maintransition);
+}
+.social-icon:hover{
+    color:orange;
+}
+.footer-text span{
+    color: blue;
+}
+.footer-text{
+    font-size: 1.2rem;
+    letter-spacing: calc(var(--letterspacing)/2);
+}
+.menu{
+    font-size: 3rem;
+    position: fixed;
+    color: yellow;
+    left: 1rem;
+    animation: bounce 2s infinite;
+}
+.navbar{
+    position: absolute;
+    background-color: green;
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    transform: translateX(-150%);
+    transition: var(--maintransition);
+}
+.oneshaNavbar{
+    transform: translateX(0);
+}
+.nav-link{
+    font-size: 2rem;
+    margin-top: .5rem;
+    list-style-type: none;
+    text-transform: uppercase;
+    color: yellow;
+    font-weight: bold;
+}
+.nav-items{
+    margin-left: 4rem;
+}
+.nav-close{
+    font-size: 2.5rem;
+}
